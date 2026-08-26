@@ -6,6 +6,9 @@ enum Names {
 	TEST_1,
 	TEST_2,
 	TEST_3,
+	TEST_4,
+	TEST_5,
+	TEST_6,
 	Land_Trotting_Creature,
 	Airborne_Creature,
 	Seafaring_Creature
@@ -49,6 +52,15 @@ static var table: Dictionary = { # only put the tiles that need a custom value h
 		#Tiles.Names.Bordered_Square: Terrain_Relations.Neutral,
 		#Tiles.Names.Stage_Steel: Terrain_Relations.Neutral,
 		#Tiles.Names.Stage_Steel_Complex: Terrain_Relations.Neutral
+	},
+	Names.TEST_4:
+	{
+	},
+	Names.TEST_5:
+	{
+	},
+	Names.TEST_6:
+	{
 	},
 	Names.Land_Trotting_Creature: { 
 		#Tiles.Names.TEST_1: Terrain_Relations.Neutral, 
@@ -118,6 +130,9 @@ static var data_name_map: Dictionary = {
 	Names.TEST_1: TEST_1, 
 	Names.TEST_2: TEST_2, 
 	Names.TEST_3: TEST_3,
+	Names.TEST_4: TEST_4,
+	Names.TEST_5: TEST_5,
+	Names.TEST_6: TEST_6,
 	Names.Land_Trotting_Creature: Land_Trotting_Creature,
 	Names.Airborne_Creature: Airborne_Creature,
 	Names.Seafaring_Creature: Seafaring_Creature
@@ -138,6 +153,15 @@ static func TEST_2() -> Character_Data:
 
 static func TEST_3() -> Character_Data:
 	return Character_Data.new(Globals.enumAsString(Names.TEST_3, Names), Player.Movement_Style.Land_Trotter, { Character_Abilities.Names.Speed_Burst: [Character_Abilities.Types.Active, Character_Abilities.Types.Friendly] }, Globals.Terrain_Types.Ground)
+
+static func TEST_4() -> Character_Data:
+	return Character_Data.new(Globals.enumAsString(Names.TEST_4, Names), Player.Movement_Style.Land_Trotter, { Character_Abilities.Names.Forward_Dash: [Character_Abilities.Types.Active, Character_Abilities.Types.Friendly] }, Globals.Terrain_Types.Ground)
+
+static func TEST_5() -> Character_Data:
+	return Character_Data.new(Globals.enumAsString(Names.TEST_5, Names), Player.Movement_Style.Land_Trotter, { Character_Abilities.Names.Double_Jump: [Character_Abilities.Types.Active, Character_Abilities.Types.Friendly] }, Globals.Terrain_Types.Ground)
+
+static func TEST_6() -> Character_Data:
+	return Character_Data.new(Globals.enumAsString(Names.TEST_6, Names), Player.Movement_Style.Land_Trotter, { Character_Abilities.Names.Bonus_Perfect_Jump: [Character_Abilities.Types.Active, Character_Abilities.Types.Friendly] }, Globals.Terrain_Types.Ground)
 
 static func Land_Trotting_Creature() -> Character_Data:
 	return Character_Data.new(Globals.enumAsString(Names.Land_Trotting_Creature, Names), Player.Movement_Style.Land_Trotter, { Character_Abilities.Names.Super_Jump: [Character_Abilities.Types.Active, Character_Abilities.Types.Friendly] }, Globals.Terrain_Types.Ground) 

@@ -24,6 +24,15 @@ func _ready() -> void:
 	#team["TEST_2"] = Characters.get_info("TEST_2")
 	var name = Globals.enumAsString(Characters.Names.TEST_3, Characters.Names)
 	team.append(Characters.get_info(name))
+
+	name = Globals.enumAsString(Characters.Names.TEST_4, Characters.Names)
+	team.append(Characters.get_info(name))
+
+	name = Globals.enumAsString(Characters.Names.TEST_5, Characters.Names)
+	team.append(Characters.get_info(name))
+
+	name = Globals.enumAsString(Characters.Names.TEST_6, Characters.Names)
+	team.append(Characters.get_info(name))
 	
 	name = Globals.enumAsString(Characters.Names.Land_Trotting_Creature, Characters.Names)
 	team.append(Characters.get_info(name))
